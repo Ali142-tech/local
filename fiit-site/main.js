@@ -151,7 +151,7 @@ $$('.hero h1').forEach(h=>{
   [...h.childNodes].forEach(c=>{
     if(c.nodeType===3){const f=document.createDocumentFragment();
       c.textContent.split(/(\s+)/).forEach(w=>{if(!w.trim())f.append(w);else f.append(mk(w))});c.replaceWith(f)}
-    else if(c.classList&&c.classList.contains('grad')){const t=c.textContent;c.textContent='';t.split(' ').forEach(w=>{const s=mk(w);c.append(s,' ')})}
+    else if(c.classList&&c.classList.contains('grad')){const t=c.textContent;c.textContent='';t.split(' ').forEach(w=>{const s=mk(w);s.classList.add('gw');c.append(s,' ')})}
   });
 });
 // typing rotator
